@@ -33,6 +33,8 @@ def Wien_T(lambda_max):
 
     
 def resolve():
+    """Cette fonction calcul la température ou la longeur d'onde maximale émise par copsr noir """
+    
     d=input("Entrer le type de donnée d'entrée : \n Taper température ou longueur d'onde : \n")
     if d==data[0]:
         print("Calcul de lambda max :")
