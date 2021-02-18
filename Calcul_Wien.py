@@ -3,7 +3,7 @@
 """
 Created on Wed Feb 17 17:25:32 2021
 
-@author: saadia
+@author: Saadia Bayou
 """
 
 from converte import *
