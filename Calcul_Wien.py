@@ -6,7 +6,7 @@ Created on Wed Feb 17 17:25:32 2021
 @author: Saadia Bayou
 """
 
-from converte import *
+from convert import *
 
 evJ=1.6076634e-19 # Joules -> 1 electronvolt vaut 1,6076634.10e-19 Joules
 RH=1.10e7 # RH = 1.10e7 m-1
@@ -16,9 +16,8 @@ lambdas=[] # Initalisation liste longueurs d'onde
 Energies=[] # Initialisation liste Energies
 
 # Constante 
-#C=2.898*(0.001) # m.K -> unité en métre Kelvin
-#
-Cte=2.898*1e-3
+ 
+Cte=2.898*1e-3 # m.K -> unité en métre Kelvin
 
 # Liste des deux paramètres d'entrées pour le calcul 
 
