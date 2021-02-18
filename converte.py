@@ -16,12 +16,12 @@ Energies=[] # Initialisation liste Energies
 
 def convert_m_nm (l):
     """Convertit une grandeur en mètre en nanomètre"""
-    L=l/(10e-9)
+    L=l*(1e+9)
     return L
 
 def convert_nm_m(l):
     """ Convertit une grandeur en nanomètre en mètre """
-    L=l*(10e-9)
+    L=l/(1e+9)
     return L
 #
 def convert_J_ev (EJ):

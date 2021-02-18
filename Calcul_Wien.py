@@ -16,7 +16,9 @@ lambdas=[] # Initalisation liste longueurs d'onde
 Energies=[] # Initialisation liste Energies
 
 # Constante 
-C=2.898e10-3 # m.K -> unité en métre Kelvin
+#C=2.898*(0.001) # m.K -> unité en métre Kelvin
+#
+Cte=2.898*1e-3
 
 # Liste des deux paramètres d'entrées pour le calcul 
 
@@ -38,12 +40,12 @@ num_param=[1,2] # 1 -> température ; 2 -> longueur d'onde
 
 def Wien_lambda(T):
     """ Cette fonction calcul la longueur d'onde à partir de la température """
-    lambda_max=C/T    
+    lambda_max=Cte/T    
     return lambda_max
      
 def Wien_T(lambda_max):
     """Cette fonction calcul la température à partir la longueur d'onde """
-    T=C/lambda_max
+    T=Cte/lambda_max
     return T
 
 
