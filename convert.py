@@ -15,27 +15,29 @@ lambdas=[] # Initalisation liste longueurs d'onde
 Energies=[] # Initialisation liste Energies
 
 
-
+# metre -> micrometre
 def convert_m_mm (l):
-    """Convertit une grandeur en mètre en nanomètre"""
+    """Convertit une grandeur en mètre en micromètre"""
     L=l*(1e+06)
     return L
-
+# micrometre -> metre
 def convert_mm_m(l):
-    """ Convertit une grandeur en nanomètre en mètre """
+    """ Convertit une grandeur en micromètre en mètre """
     L=l/(1e+06)
     return L
 
+#metre -> nanometre
 def convert_m_nm (l):
     """Convertit une grandeur en mètre en nanomètre"""
     L=l*(1e+09)
     return L
-
+# nanometre -> metre
 def convert_nm_m(l):
     """ Convertit une grandeur en nanomètre en mètre """
     L=l/(1e+09)
     return L
 #
+    
 def convert_J_ev (EJ):
     """ Convertit une grandeur en  Joule en electronvolt """
     return EJ/evJ 
