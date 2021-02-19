@@ -14,14 +14,24 @@ c=3.00e8 # c=3.00e08 m.s-1
 lambdas=[] # Initalisation liste longueurs d'onde
 Energies=[] # Initialisation liste Energies
 
+# metre -> millimetre
+def convert_m_millim (l):
+    """Convertit une grandeur en mètre en millimètre"""
+    L=l*(1e+03)
+    return L
+# minimetre -> metre
+def convert_millim_m(l):
+    """ Convertit une grandeur en millimètre en mètre """
+    L=l/(1e+03)
+    return L
 
 # metre -> micrometre
-def convert_m_mm (l):
+def convert_m_microm (l):
     """Convertit une grandeur en mètre en micromètre"""
     L=l*(1e+06)
     return L
 # micrometre -> metre
-def convert_mm_m(l):
+def convert_microm_m(l):
     """ Convertit une grandeur en micromètre en mètre """
     L=l/(1e+06)
     return L

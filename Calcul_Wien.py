@@ -88,7 +88,7 @@ def resolve_Wien():
         
         lambda_max=float(input("\nEntrer la valeur de la longeur d'onde : lambda_max = "))
         
-        u_l=input("\nEntrer l'unité de lambda_max :\n \n m -> pour mètre \n nm -> pour nanomètre \n microm -> pour micrometre\n \n unité lambda_max: ")
+        u_l=input("\nEntrer l'unité de lambda_max :\n \n m -> pour mètre \n nm -> pour nanomètre \n microm -> pour micrometre \n millim -> pour millimètre\n \n unité lambda_max: ")
         
         if u_l=="nm":
             
@@ -97,11 +97,19 @@ def resolve_Wien():
             print("lambda_max_m =",lambda_max, "mètre")
         
         elif u_l=="microm":
+            
             print("\nConversion de lambda en métre\n")
-            lambda_max=convert_mm_m(lambda_max)
+            lambda_max=convert_microm_m(lambda_max)
+            print("lambda_max =",lambda_max, "mètre")
+            
+        elif u_l=="minim":
+            
+            print("\nConversion de lambda en métre\n")
+            lambda_max=convert_millim_m(lambda_max)
             print("lambda_max =",lambda_max, "mètre")
         
         elif u_l=="m":
+            
             print("\nlambda est dans la bonne unité pour le calcul : le mètre")
         
         else :
