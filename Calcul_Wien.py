@@ -46,26 +46,25 @@ def Wien_T(lambda_max):
     return T
 
 
-
 def resolve_Wien():
     """Cette fonction calcul la température ou la longeur d'onde maximale émise par copsr noir """
     
-    print("\nEntrer la donnée d'entrée connue : \n")
+    print("\nSaisies des données : paramètre connu et unité correspondante ")
     
-    d=int(input(" \nEntrer 1 pour la température ou entrer 2 pour la longueur d'onde : "))
+    print("\nEntrer la donnée d'entrée connue :\n")
     
-    
+    d=int(input("\nEntrer la valeur 1 -> pour la température\n \nou\n \nentrer la valeur 2 -> pour la longueur d'onde\n \ndonnée d'entrée : "))
     
     if d==num_param[0]:
         
-       
-        print("\nSaisies des données :")
-        
+        print("\nCalcul de lambda max :")
+           
         T=float(input("\nEntrer la valeur de la température : T= "))
         
         u_T=input("\nEntrer l'unité de la température -> K pour Kelvin ou deg pour degré : ")
         
         if u_T=="deg":
+            
             print("\nConversion de T °C en Kelvin\n")
             T=convert_deg_K(T)
             print("T_K =",T, "Kelvin")
@@ -74,11 +73,9 @@ def resolve_Wien():
             print("\nT est dans la bonne unité pour le calcul : le Kelvin")
         
         else :
-            print("\nunité inconnue")
-            
+            print("\nunité inconnue")        
     
-        print("\nCalcul de lambda max :")
-            
+       # calcul lamnbda max
         lambda_max=(Wien_lambda(T))
         print("\nLa longeur d'onde maximale émise est : lambda_max=",lambda_max, "metre\n")
         
@@ -91,21 +88,26 @@ def resolve_Wien():
         
         lambda_max=float(input("\nEntrer la valeur de la longeur d'onde : lambda_max = "))
         
-        u_l=input("\nEntrer l'unité de lambda_max -> m pour mètre ou nm pour nanomètre : ")
+        u_l=input("\nEntrer l'unité de lambda_max :\n \n m -> pour mètre \n nm -> pour nanomètre \n microm -> pour micrometre\n \n unité lambda_max: ")
         
         if u_l=="nm":
             
             print("\nConversion de lambda en métre\n")
             lambda_max=convert_nm_m(lambda_max)
             print("lambda_max_m =",lambda_max, "mètre")
-            
+        
+        elif u_l=="microm":
+            print("\nConversion de lambda en métre\n")
+            lambda_max=convert_mm_m(lambda_max)
+            print("lambda_max =",lambda_max, "mètre")
+        
         elif u_l=="m":
             print("\nlambda est dans la bonne unité pour le calcul : le mètre")
         
         else :
             print("\nunité inconnue")
         
-        
+        # calcul de la température
         T=(Wien_T(lambda_max))
         print("\n\nLa température en Kelvin est : \n \nT = ",T, "K\n")
             
